@@ -5,9 +5,9 @@
 * final_add_jupiter.ipynb is the jupiter file that contains the code for concatenation of multiple CSV files into one.
 * merged_file.csv contains all the details of the invoices as PDF file.
 * **NOTE** **:** In my approach I have appended certain details directly as ADOBE is a Product Based Company so it have to make products specific to certain Company hence the Primary Details can be fixed.
-* pdfservices-api-credentials.json it contains the credential of mine Adobe PDF Extract API.
-* private.key is also with the Adobe PDF Extract API details.
-* work.py contains the code that convert multiple PDFs to multiple CSV file.
+* _pdfservices-api-credentials.json_ it contains the credential of mine Adobe PDF Extract API.
+* _private.key_ is also with the Adobe PDF Extract API details.
+* _work.py_ contains the code that convert multiple PDFs to multiple CSV file.
 * *ZIP* this folder contains all the Zipped files.
 * *TestDataSet* this folder contains all the Test PDF given by ADOBE for the Hackathon.
 * *final* this folder contains all the CSV files for the individual PDFs with relavant name to access them easily.
@@ -88,15 +88,16 @@
 13.The ZIP file is opened and the "structuredData.json" file containing the extracted data is read:
     <sub>
         
-    with zipfile.ZipFile(zip_file, "r") as zip_ref:
-        zip_ref.extract("structuredData.json", destination_folder)
+            archive = zipfile.ZipFile(output_file, 'r')
+            jsonentry = archive.open('structuredData.json')
+
 
     
 14.The JSON data is loaded into a Python dictionary:
     <sub>
         
-    with open(os.path.join(destination_folder, "structuredData.json"), "r") as json_file:
-        json_data = json.load(json_file)
+            jsondata = jsonentry.read()
+            data = json.loads(jsondata)
 
 
     
@@ -126,10 +127,10 @@
                 }
                 
                 
-16.The code searches for specific elements in the extracted data that correspond to different fields and extracts their values. \This part of the code will depend on the structure of the JSON data and the specific fields we want to extract.\
+16.The code searches for specific elements in the extracted data that correspond to different fields and extracts their values. This part of the code will depend on the structure of the JSON data and the specific fields we want to extract.
 
 17.The extracted values are appended to the corresponding lists in the *extracted_data* dictionary.\
-18.Finally, the extracted data is written to a CSV file in the *output_folder* using the *csv.writer* module. Each field's data will be written in a separate CSV file:
+18.Finally, the extracted data is written to a CSV file in the *output_folder* using the *csv.writer* module. Each PDF's data will be written in a separate CSV file:
     <sub>
     
     for field, data in extracted_data.items():
