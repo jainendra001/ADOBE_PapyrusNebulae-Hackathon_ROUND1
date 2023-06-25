@@ -1,9 +1,9 @@
 # Adobe_PDF_Extract_API_Project
 ## This project is made as a submission to ongoing Adobe PapyrusNebulae Hackathon 2023 .
 *This repository contain files, there relevance in the project* 
-* Adobe_papyrus.py is the main python file that contain the core code for conversion of PDF's to JSON file using the Adobe PDF Extract API and also contains the code for conversion these PDF's to a single CSV file.
-* final_add_jupiter.ipynb is the jupiter file that contains the code for concatenation of multiple CSV files into one.
-* merged_file.csv contains all the details of the invoices as PDF file.
+* _Adobe_papyrus.py_ is the main python file that contain the core code for conversion of PDF's to JSON file using the Adobe PDF Extract API and also contains the code for conversion these PDF's to a single CSV file.
+* _final_add_jupiter.ipynb_ is the jupiter file that contains the code for concatenation of multiple CSV files into one.
+* _merged_file.csv_ contains all the details of the invoices as PDF file.
 * **NOTE** **:** In my approach I have appended certain details directly as ADOBE is a Product Based Company so it have to make products specific to certain Company hence the Primary Details can be fixed.
 * _pdfservices-api-credentials.json_ it contains the credential of mine Adobe PDF Extract API.
 * _private.key_ is also with the Adobe PDF Extract API details.
