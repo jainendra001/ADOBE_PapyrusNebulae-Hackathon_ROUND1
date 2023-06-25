@@ -10,7 +10,7 @@
 * _work.py_ contains the code that convert multiple PDFs to multiple CSV file.
 * *ZIP* this folder contains all the Zipped files.
 * *TestDataSet* this folder contains all the Test PDF given by ADOBE for the Hackathon.
-* *final* this folder contains all the CSV files for the individual PDFs with relavant name to access them easily.
+* *final* this folder contains all the CSV files for the individual PDF's with relavant name to access them easily.
 * **NOTE :** In my approach I have made multiple CSV files so that the company can easily access single CSV file when they needed. 
 ### My approach for this TASK :
 1.The code begins by importing the required libraries and modules:\
@@ -130,6 +130,8 @@
 16.The code searches for specific elements in the extracted data that correspond to different fields and extracts their values. This part of the code will depend on the structure of the JSON data and the specific fields we want to extract.
 
 17.The extracted values are appended to the corresponding lists in the *extracted_data* dictionary.\
+
+
 18.Finally, the extracted data is written to a CSV file in the *output_folder* using the *csv.writer* module. Each PDF's data will be written in a separate CSV file:
     <sub>
     
