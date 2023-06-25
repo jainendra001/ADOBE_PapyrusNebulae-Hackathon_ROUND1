@@ -156,7 +156,7 @@
 21.*To use this function:*
   * Set the file_path variable to the directory path where the CSV files are located.
   * List all the files in the file_path directory.
-  * Sort the file list based on the lexiographically as per name.
+  * Sort the file list based on the lexiographical order as per name.
   * Create an empty DataFrame to store the concatenated data.
   * Iterate over each file in the sorted file list:
     If the file is a CSV file, read it using pd.read_csv().
