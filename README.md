@@ -4,14 +4,14 @@
 * Adobe_papyrus.py is the main python file that contain the core code for conversion of PDF's to JSON file using the Adobe PDF Extract API and also contains the code for conversion these PDF's to a single CSV file.
 * final_add_jupiter.ipynb is the jupiter file that contains the code for concatenation of multiple CSV files into one.
 * merged_file.csv contains all the details of the invoices as PDF file.
-* **NOTE**: In my approach I have appended certain details directly as ADOBE is a Product Based Company so it have to make products specific to certain Company so the Primary Details can be fixed.
+* **NOTE** **:** In my approach I have appended certain details directly as ADOBE is a Product Based Company so it have to make products specific to certain Company hence the Primary Details can be fixed.
 * pdfservices-api-credentials.json it contains the credential of mine Adobe PDF Extract API.
 * private.key is also with the Adobe PDF Extract API details.
 * work.py contains the code that convert multiple PDFs to multiple CSV file.
 * *ZIP* this folder contains all the Zipped files.
 * *TestDataSet* this folder contains all the Test PDF given by ADOBE for the Hackathon.
 * *final* this folder contains all the CSV files for the individual PDFs with relavant name to access them easily.
-* *NOTE :* In my approach I have made multiple CSV files so that the company can easily access single CSV file when they needed. 
+* **NOTE :** In my approach I have made multiple CSV files so that the company can easily access single CSV file when they needed. 
 ### My approach for this TASK :
 1.The code begins by importing the required libraries and modules:\
     <sub>
