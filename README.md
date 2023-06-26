@@ -127,12 +127,12 @@
                 }
                 
                 
-16.The code searches for specific elements in the extracted data that correspond to different fields and extracts their values. This part of the code will depend on the structure of the JSON data and the specific fields we want to extract.
+16.The code searches for specific elements in the extracted data corresponding to different fields and extracts their values. This part of the code will depend on the structure of the JSON data and the specific fields we want to extract.
 
 17.The extracted values are appended to the corresponding lists in the *extracted_data* dictionary.
 
 
-18.Finally, the extracted data is written to a CSV file in the *output_folder* using the *csv.writer* module. Each PDF's data will be written in a separate CSV file:
+18. Finally, the extracted data is written to a CSV file in the *output_folder* using the *csv.writer* module. Each PDF's data will be written in a separate CSV file:
     <sub>
     
     for field, data in extracted_data.items():
@@ -151,12 +151,12 @@
 
         
         
-20.The *conversion_from_multi_csv_to_one()* function is defined, this function reads multiple CSV files from a specified directory and concatenates them into a 
+20.The *conversion_from_multi_csv_to_one()* function is defined; this function reads multiple CSV files from a specified directory and concatenates them into a 
     single CSV file.\
 21.*To use this function:*
   * Set the file_path variable to the directory path where the CSV files are located.
   * List all the files in the file_path directory.
-  * Sort the file list based on the lexiographical order as per name.
+  * Sort the file list based on the lexicographical order as per name.
   * Create an empty DataFrame to store the concatenated data.
   * Iterate over each file in the sorted file list:
     If the file is a CSV file, read it using pd.read_csv().
@@ -164,3 +164,4 @@
     pd.concat().
   * The concatenated DataFrame is saved to a new CSV file named "merged_file.csv" in the 
     current working directory.
+**NOTE:**  In my approach, I have taken a case where might be my logic to fetch the data can't fetch, so in spite of fetching the wrong data my code will tell the user that the data is Not Found with the location of the PDF that can be added so that it can be easily rectified.     
